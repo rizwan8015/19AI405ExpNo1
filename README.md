@@ -1,20 +1,13 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: rizwan B </h3>
-<h3>Register Number: 21222410051</h3>
-
+<h3>Name: RIZWAN B </h3>
+<h3>Register Number: 212224100051</h3>
 <h3>AIM:</h3>
-<br>
 
 <p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
 
 <h3>Theory</h3>
-<h3>AI Surveillance System Agent:</h3>
-<p>
-This agent monitors a restricted area using cameras and detects suspicious activity such as unauthorized entry or unusual movement. The environment consists of multiple zones (e.g., Zone A and Zone B). The agent continuously scans both zones.
-
-If suspicious activity is detected in any zone, the agent raises an alert. The agent's performance improves when it correctly detects threats and decreases when it wastes time scanning empty zones or misses detection.
-
-The agent uses sensors like cameras and motion detectors to observe activity and actuators such as alarms and notifications to respond..</p>
+<h3>Medicine prescribing agent:</h3>
+<p>Such this agent prescribes medicine for fever (greater than 98.5 degrees) which we consider here as unhealthy, by the user temperature input, and another environment is rooms in the hospital (two rooms). This agent has to consider two factors one is room location and an unhealthy patient in a random room, the agent has to move from one room to another to check and treat the unhealthy person. The performance of the agent is calculated by incrementing performance and each time after treating in one room again it has to check another room so that the movement causes the agent to reduce its performance. Hence, agents prescribe medicine to unhealthy.</p>
 <hr>
 <h3>PEAS DESCRIPTION:</h3>
 <table>
@@ -26,32 +19,28 @@ The agent uses sensors like cameras and motion detectors to observe activity and
     <td><strong>Sensors</strong></td>
   </tr>
     <tr>
-    <td><strong>AI Surveillance System</strong></td>
-    <td><strong>Accurate threat detection, minimal false alarms</strong></td>
-     <td><strong>Monitored zones, people movement</strong></td>
-    <td><strong>Alarm, alert system</strong></td>
-    <td><strong>Cameras, motion sensors</strong></td>
+    <td><strong>Medicine prescribing agent</strong></td>
+    <td><strong>Treating unhealthy, agent movement</strong></td>
+     <td><strong>Rooms, Patient</strong></td>
+    <td><strong>Medicine, Treatment</strong></td>
+    <td><strong>Location, Temperature of patient</strong></td>
   </tr>
 </table>
 <hr>
 <H3>DESIGN STEPS</H3>
 <h3>STEP 1:Identifying the input:</h3>
-<p>Motion detection status (Yes/No)</p>
-<p>Zone location (Zone A / Zone B)</p>
+<p>Temperature from patients, Location.</p>
 <h3>STEP 2:Identifying the output:</h3>
-<p>Trigger alert if suspicious activity is detected.</p>
+<p>Prescribe medicine if the patient in a random has a fever.</p>
 <h3>STEP 3:Developing the PEAS description:</h3>
-<p>PEAS description is developed by identifying performance, environment, actuators, and sensors of the agent..</p>
+<p>PEAS description is developed by the performance, environment, actuators, and sensors in an agent.</p>
 <h3>STEP 4:Implementing the AI agent:</h3>
-<p>Monitor both zones</p>
-<p>Detect suspicious activity randomly</p>
-<p>Raise alert if detected</p>
+<p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
-<p>Increase performance for correct detection</p>
-<p>Decrease performance for unnecessary scanning</p>
+<p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 
-## Program
-```python
+## Program:
+```
 import random
 import time
 
@@ -131,11 +120,9 @@ zones = ["Zone A", "Zone B", "Zone C"]
 agent = SurveillanceAgent(zones)
 agent.run()
 ```
+## Output:
 
-## Output
+<img width="1343" height="770" alt="image" src="https://github.com/user-attachments/assets/5a852a8b-3dc7-424f-9630-9a7e17c3a16f" />
 
-<img width="1506" height="807" alt="Screenshot 2026-04-27 101728" src="https://github.com/user-attachments/assets/d3590316-d49e-4c65-a967-5aac8fd99318" />
-
-## Result 
-
+## Result:
 The intelligent surveillance agent was successfully implemented. It used internal state (risk scores), probabilistic sensing, and adaptive decision-making to improve detection efficiency and overall performance.
